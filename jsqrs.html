@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <script>
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?4655fe6d17340438c425cdb59915146d";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
-        })();
-        </script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?bb23d6c971adb655d27a2880790e5adf";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
         <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -163,7 +163,7 @@
                 background: none;
             }
 
-            .header-screen, .footer-screen, .print-button, .home-button {
+            .header-screen, .footer-screen, .print-button, .home-button, .side-nav {
                 display: none;
             }
 
@@ -342,12 +342,61 @@
         .timeboard-bold {
             font-weight: bold;
         }
+
+        /* 侧边悬浮导航栏样式 */
+        .side-nav {
+            position: fixed;
+            top: 120px;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 0 8px 8px 0;
+            box-shadow: 1px 2px 8px rgba(0,0,0,0.08);
+            padding: 12px 8px 12px 4px;
+            z-index: 1200;
+            transition: background 0.2s;
+        }
+        .side-nav .nav-btn {
+            display: block;
+            color: #1a5fb4;
+            background: none;
+            border: none;
+            padding: 6px 18px 6px 10px;
+            margin: 0;
+            font-size: 15px;
+            border-radius: 4px;
+            text-align: left;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+        }
+        .side-nav .nav-btn:hover {
+            background: #eaf2fb;
+            color: #0d4a9e;
+        }
+        @media (max-width: 600px) {
+            .side-nav {
+                top: 60px;
+                left: 0;
+                padding: 6px 4px 6px 2px;
+            }
+            .side-nav .nav-btn {
+                font-size: 13px;
+                padding: 4px 10px 4px 6px;
+            }
+        }
+        @media print {
+            .side-nav {
+                display: none !important;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- 顶部信息栏 - 屏幕显示 -->
     <div class="header-screen">
-        <div class="timestamp" id="timestamp">2025年7月3日 20:58:58</div>
+        <div class="timestamp" id="timestamp">2025年7月5日 20:58:58</div>
         <div class="title" id="documentTitle">家属确认书</div>
     </div>
 
@@ -360,7 +409,7 @@
         <h1 class="document-title" id="contentTitle">家属确认书</h1>
 
         <div class="section">
-            <p style="text-align: right;">qrs2025_07_02</p>
+            <p style="text-align: right;">qrs2025_07_05</p>
         </div>
 
             <div class="section">
@@ -371,7 +420,7 @@
 
             <div class="sub-section"><p>案发时间是2019年1月20日18时30分许，王贵平被抓获时间是2019年1月20日19时许。滞留贵阳市云岩区毓秀路派出所近28小时后，于2019年1月21日22时50分被送至贵阳市云岩区看守所羁押。至此，王贵平被正式采取刑事拘留措施。2019年1月29日，王贵平被贵阳市云岩区人民检察院批准逮捕，由贵阳市公安局云岩分局执行逮捕，但该公安局未依法向家属送达《逮捕通知书》，法定至迟送达《逮捕通知书》期限为2019年1月30日。截至目前，贵阳市公安局云岩分局尚未向王贵平家属实际送达《刑事拘留通知书》和《逮捕通知书》。根据《中华人民共和国刑事诉讼法》第八十五条、第九十三条：</p></div>
             <div class="sub-section">
-                <p>刑事拘留通知书法定至迟送达家属时限为2019年1月22日。</p>
+                <p>刑事拘留通知书法定至迟送达家属时限为2019年1月22日；逮捕通知书法定至迟送达家属时限为2019年1月30日。</p>
             </div>
             <div class="sub-section" id="timeBoard"></div>
         </div>
@@ -379,7 +428,7 @@
         <div class="section">
             <div class="section-title">二、关于王贵平父亲未收到刑事拘留通知书和逮捕通知书问题的确认</div>
             <div class="sub-section">
-                <p>我是王廷书，我儿子王贵平于2019年1月20日涉案，至今2025年7月3日，始终未收到《刑事拘留通知书》和《逮捕通知书》。我在此郑重声明：若有不实之处，愿承担法律责任。</p>
+                <p>我是王廷书，我儿子王贵平于2019年1月20日涉案，至今2025年7月5日，始终未收到《刑事拘留通知书》和《逮捕通知书》。我在此郑重声明：若有不实之处，愿承担法律责任。</p>
                 <p></p>
                 <p style="page-break-before: always;">详见视频</p>
                 <div style="text-align: right;">
@@ -390,7 +439,7 @@
                     <div>
                         <span>日&nbsp;&nbsp;期：</span>
                         <span style="display: inline-block; border-bottom: 1px solid #333; width: 140px; vertical-align: bottom;">
-                            2025年7月3日
+                            2025年7月5日
                         </span>
                     </div>
                 </div>
@@ -400,7 +449,7 @@
         <div class="section">
             <div class="section-title">三、关于王贵平母亲未收到刑事拘留通知书和逮捕通知书问题的确认</div>
             <div class="sub-section">
-                <p>我是罗顺琼，我儿子王贵平于2019年1月20日涉案，至今2025年7月3日，始终未收到《刑事拘留通知书》和《逮捕通知书》。我在此郑重声明：若有不实之处，愿承担法律责任。</p>
+                <p>我是罗顺琼，我儿子王贵平于2019年1月20日涉案，至今2025年7月5日，始终未收到《刑事拘留通知书》和《逮捕通知书》。我在此郑重声明：若有不实之处，愿承担法律责任。</p>
                 <p></p>
                 <p>详见视频</p>
                 <div style="text-align: right;">
@@ -411,7 +460,7 @@
                     <div>
                         <span>日&nbsp;&nbsp;期：</span>
                         <span style="display: inline-block; border-bottom: 1px solid #333; width: 140px; vertical-align: bottom;">
-                            2025年7月3日
+                            2025年7月5日
                         </span>
                     </div>
                 </div>
@@ -437,7 +486,7 @@
         <div class="source-path" id="sourcePath">来源：</div>
     </div>
 
-    <nav class="header-nav" id="nav">
+    <nav class="side-nav" id="nav">
       <a href="Navigation.html" class="nav-btn">导航</a>
       <a href="index.html" class="nav-btn">主页</a>
       <a href="jsqrs.html" class="nav-btn">确认书</a>
@@ -570,7 +619,7 @@
                 qr.className = 'print-qrcode-container';
                 qr.innerHTML = `
                     <img class="print-qrcode-img" 
-                         src="favicon.ico/QR code_jsqrs.png" 
+                         src="favicon.ico/icoQR_code_jsqrs.png" 
                          onerror="this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkEEjQhJzVWJgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADElEQVQ4y2NgGAWjYBSMglEwCkbBKBgFowAAADgKARnQ9v4AAAAASUVORK5CYII='"
                          alt="二维码">
                 `;
@@ -634,28 +683,33 @@
                         }
                     }
 
-                    /* 二维码定位在页码正下方 */
-                    body {
-                        position: relative;
-                    }
-                    /* 定义打印二维码容器的样式 */
+                    /* 二维码定位在页码右下角，紧贴页码 */
                     .print-qrcode-container {
                         display: flex !important;
                         position: fixed !important;
-                        right: 1cm !important; /* 与页码右对齐 */
-                        bottom: 0.1cm !important; /* 紧贴页码下方 */
+                        right: 1.2cm !important;
+                        bottom: 0.6cm !important;
                         z-index: 9999 !important;
-                        transform: translateX(50%); /* 水平居中于页码 */
+                        width: 48px !important;
+                        height: 48px !important;
+                        justify-content: flex-end !important;
+                        align-items: flex-end !important;
+                        background: none !important;
+                        box-shadow: none !important;
+                        pointer-events: none !important;
                     }
-                    /* 定义打印二维码图像的样式 */
                     .print-qrcode-img {
                         width: 48px !important;
-                        height: 44px !important;
+                        height: 48px !important;
+                        object-fit: contain !important;
+                        background: #fff !important;
                         border: 1px solid #ccc !important;
-                        background: white !important;
-                        padding: 2px !important;
-                    }                }
-                /* 屏幕下二维码隐藏 */
+                        border-radius: 4px !important;
+                        box-shadow: 0 1px 4px rgba(0,0,0,0.08) !important;
+                        margin: 0 !important;
+                        padding: 0 !important;
+                    }
+                }
                 @media screen {
                     .print-qrcode-container {
                         display: none !important;
